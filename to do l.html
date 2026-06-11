@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated to-do list</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .container{
+              width: 400px;
+              background: rgba(255,255,255, 0.15);
+              backdrop-filter: blur (12px);
+              padding: 30px;
+              border-radius: 12px;
+              box-shadow: 0 10 30px rgba(0,0,0,0,3);
+              border: 1px solid rgba(255,255,255, 0.2);
+              animation: fadeIn 1s ease;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .input-box{
+            display: flex;
+            gap: 20px;
+             
+        }
+        input{
+            padding: 14px;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            font-size: 16px;
+            flex: 1;
+        }
+        input:focus{
+            transform: scale(1.03);
+           box-shadow: 0 0 10px lightgreen;
+          
+        }
+        button{
+            padding: 14px;
+            border-radius: 10px;
+            border: none;
+            background-color: #00e676;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s ;
+            cursor: pointer;
+             
+        }
+        button:hover{
+            background: #00c853;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px;
+        }
+        ul{
+            margin-top: 25px;
+            list-style: none;
+            
+        }
+        li{
+            color: white;
+            padding: 15px;
+            background: rgba(255,255,255, 0.15);
+            border-radius: 12px;
+            justify-content: space-between;
+            align-items:center ;
+            transition: 0.3s;
+            display: flex;
+            margin-bottom: 12px;
+            animation: slideIn 0.4s ease;
+        }
+        li:hover{
+            transform: scale(1.02);
+        }
+        .delete{
+            background: crimson;
+            
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform:translateX(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translate(0);
+        }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform:scale(0.8);
+        }
+        to{
+            opacity: 1;
+            transform: scale(0);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MY TO-DO LIST</h1>
+        <div class="input-box">
+            <input id="go" type="text" placeholder="Enter your task">
+            <button id="btn">Add</button>
+        </div>
+        <ul id="list"></ul>
+    </div>
+    <script>
+        const go = document.getElementById ("go");
+        const btn = document.getElementById ("btn");
+        const list = document.getElementById ("list");
+        btn.addEventListener("click", function (){
+            const task = go.value.trim();
+            if(task === ""){
+                alert("Please enter a task");
+                return;
+            }
+         
+        // creating li
+        const li = document.createElement("li");
+        // create a task text
+        const span = document.createElement("span");
+        span.textContent= task;
+        //delete task
+         const delBtn= document.createElement("button"); 
+        delBtn.classList.add("delete");
+        // delete task
+        delBtn.addEventListener("click", function (){
+            li.remove();
+        });
+        li.appendChild(span)
+        li.appendChild(delBtn)
+        list.appendChild(li);
+        
+        go.value = "";
+
+    })
+    </script>
+</body>
+</html>
