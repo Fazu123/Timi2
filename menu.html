@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Harvest & Hearth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="restaurant.html" class="brand"><span class="brand-mark">H</span><span>Harvest &amp; Hearth</span></a>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="restaurant.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-secondary">Reserve</a>
+        <a href="restaurant.html" class="btn btn-primary">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div class="eyebrow">Freshly prepared</div>
+        <h1>Our menu</h1>
+        <p>Thoughtful dishes, bold flavors, and comforting classics made for every kind of craving.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container menu-layout">
+        <aside class="filter-panel">
+          <h3>Browse by category</h3>
+          <div class="filter-list">
+            <button class="filter-pill active" data-filter="all">All dishes</button>
+            <button class="filter-pill" data-filter="starters">Starters</button>
+            <button class="filter-pill" data-filter="mains">Mains</button>
+            <button class="filter-pill" data-filter="desserts">Desserts</button>
+            <button class="filter-pill" data-filter="drinks">Drinks</button>
+          </div>
+        </aside>
+
+        <div class="all-menu-grid">
+          <article class="menu-card-large" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80" alt="Starter dish" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Roasted Burrata</h3><span class="price">$14</span></div>
+              <p>Sweet tomato, basil oil, and toasted sourdough.</p>
+              <span class="tag">Starter</span>
+            </div>
+          </article>
+
+          <article class="menu-card-large" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1000&q=80" alt="Steak plate" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Chargrilled Steak</h3><span class="price">$29</span></div>
+              <p>Garlic mash, roasted tomato, and rosemary jus.</p>
+              <span class="tag">Main</span>
+            </div>
+          </article>
+
+          <article class="menu-card-large" data-category="mains">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Pasta dish" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Wild Mushroom Pasta</h3><span class="price">$19</span></div>
+              <p>Parmesan cream, roasted mushrooms, and lemon zest.</p>
+              <span class="tag">Main</span>
+            </div>
+          </article>
+
+          <article class="menu-card-large" data-category="starters">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="Salad dish" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Citrus Harvest Bowl</h3><span class="price">$16</span></div>
+              <p>Baby greens, citrus segments, avocado, and toasted seeds.</p>
+              <span class="tag">Starter</span>
+            </div>
+          </article>
+
+          <article class="menu-card-large" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1000&q=80" alt="Dessert" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Warm Chocolate Tart</h3><span class="price">$12</span></div>
+              <p>Dark chocolate, vanilla cream, and berry compote.</p>
+              <span class="tag">Dessert</span>
+            </div>
+          </article>
+
+          <article class="menu-card-large" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1000&q=80" alt="Cocktail drink" />
+            <div class="menu-card-body">
+              <div class="menu-item-top"><h3>Sunset Spritz</h3><span class="price">$11</span></div>
+              <p>Citrus, sparkling wine, and fresh herbs.</p>
+              <span class="tag">Drink</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h3>Ready for your next feast?</h3>
+            <p>Reserve a table and let us build your perfect evening.</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Book a table</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>© <span data-year>2026</span> Harvest &amp; Hearth</div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Reservations</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
